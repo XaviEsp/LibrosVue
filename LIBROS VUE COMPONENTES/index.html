@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VUE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+
+<body>
+    <div id="app">
+        <h1>My Bookstore con VUE</h1>
+
+        <div class="input">
+            <input v-model="searchValue" id="input" type="text" placeholder="Search your Book..." />
+        </div>
+
+
+
+
+
+        <div class="container">
+            <book v-for="eachBook in filteredBooks" :book="eachBook"></book>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="bookComponent.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>
